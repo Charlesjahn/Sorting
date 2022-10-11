@@ -30,4 +30,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dicesSix"
+        android:layout_width="131dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleGameDicyesSix"
+        app:srcCompat="@drawable/dicequestion" />
+
+    <Button
+        android:id="@+id/dicesBNT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="throwDices"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dicesSix"
+        app:layout_constraintStart_toStartOf="@+id/dicesSix" />
+
+    <TextView
+        android:id="@+id/totalValueDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/dicesBNT"
+        app:layout_constraintEnd_toEndOf="@+id/dicesBNT"
+        app:layout_constraintStart_toStartOf="@+id/dicesBNT" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
