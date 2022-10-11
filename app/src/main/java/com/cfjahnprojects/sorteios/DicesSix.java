@@ -39,28 +39,35 @@ public class DicesSix extends AppCompatActivity {
         startActivity(screen);
     }
 
-    public void throwDices(View view) {
-        TextView quantityDices = findViewById(R.id.quantityDices);
-        int quantityDicesValue = Integer.valueOf(String.valueOf(quantityDices.getText()));
-        int total = 0;
+    private int dicesPlayed = 0;
+    private int total = 0;
 
-        for(int i=0; i<quantityDicesValue; i++){
+    public void throwDices(View view) {
+
+        if(this.dicesPlayed < 6){
             int num = new Random().nextInt(this.dicesNum.length);
-            setFinalDiceSide(num,this.dicesNumQuant[i]);
-            total += num+1;
+            setFinalDiceSide(num,this.dicesNumQuant[dicesPlayed]);
+            this.total += num+1;
+            this.dicesPlayed += 1;
         }
+        else{
+            for(int i = 0; i <= dicesNumQuant.length-1;i++){
+                setDiceSide(this.dicesNumQuant[i]);
+            }
+            this.dicesPlayed = 0;
+            this.total = 0;
+        }
+
         TextView totalTV = findViewById(R.id.totalValueDice);
-        totalTV.setText(String.valueOf(total));
+        totalTV.setText(String.valueOf(this.total));
     }
 
     private void setFinalDiceSide(int num, int id) {
         ImageView ImVi = findViewById(id);
-        ImVi.setImageResource(dicesNum[num]);
+        ImVi.setImageResource(this.dicesNum[num]);
     }
-
-    private void addTotal(int x) {
-        int total = 0;
+    private void setDiceSide(int id) {
+        ImageView ImVi = findViewById(id);
+        ImVi.setImageResource(R.drawable.dicequestion);
     }
-
-
 }

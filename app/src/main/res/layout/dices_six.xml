@@ -80,8 +80,9 @@
         android:id="@+id/dicesBNT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="Throw"
         android:onClick="throwDices"
-        android:text="Button"
+        android:text="Throw"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/dicesSix5"
         app:layout_constraintStart_toStartOf="@+id/dicesSix5"
@@ -121,17 +122,5 @@
         app:layout_constraintStart_toEndOf="@+id/dicesSix5"
         app:layout_constraintTop_toTopOf="@+id/dicesSix5"
         app:srcCompat="@drawable/dicequestion" />
-
-    <EditText
-        android:id="@+id/quantityDices"
-        android:layout_width="144dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Quantity of dices"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleGameDicyesSix" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
