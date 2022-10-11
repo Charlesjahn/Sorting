@@ -7,7 +7,7 @@
     tools:context=".HeadTail">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/homeHT"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:onClick="mainScreen"

@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".JoKenPo">
 
+    <ImageView
+        android:id="@+id/homeJKP"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="mainScreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

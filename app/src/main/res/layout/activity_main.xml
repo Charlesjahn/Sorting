@@ -11,8 +11,22 @@
         android:layout_width="200dp"
         android:layout_height="115dp"
         android:onClick="headTail"
+        app:layout_constraintBottom_toTopOf="@+id/joKenPoGame"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/headtail"
-        tools:layout_editor_absoluteY="41dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/headtail" />
+
+    <ImageView
+        android:id="@+id/joKenPoGame"
+        android:layout_width="200dp"
+        android:layout_height="115dp"
+        android:onClick="joKenPo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/hardTailGame"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hardTailGame"
+        app:layout_constraintTop_toBottomOf="@+id/hardTailGame"
+        app:srcCompat="@drawable/jokenpo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Intent screen = new Intent(this,HeadTail.class);
         startActivity(screen);
     }
+    public void joKenPo(View view){
+        Intent screen = new Intent(this,JoKenPo.class);
+        startActivity(screen);
+    }
 }
