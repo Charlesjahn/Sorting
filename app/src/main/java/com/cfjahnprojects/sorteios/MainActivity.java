@@ -21,4 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Intent screen = new Intent(this,JoKenPo.class);
         startActivity(screen);
     }
+    public void dicesSix(View view){
+        Intent screen = new Intent(this,DicesSix.class);
+        startActivity(screen);
+    }
 }

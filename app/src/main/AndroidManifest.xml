@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Sorteios"
         tools:targetApi="31">
         <activity
+            android:name=".DicesSix"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JoKenPo"
             android:exported="false">
             <meta-data

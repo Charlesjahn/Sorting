@@ -24,10 +24,22 @@
         android:layout_width="200dp"
         android:layout_height="115dp"
         android:onClick="joKenPo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/dicesSixGame"
         app:layout_constraintEnd_toEndOf="@+id/hardTailGame"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/hardTailGame"
         app:layout_constraintTop_toBottomOf="@+id/hardTailGame"
         app:srcCompat="@drawable/jokenpo" />
+
+    <ImageView
+        android:id="@+id/dicesSixGame"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:onClick="dicesSix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/joKenPoGame"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/joKenPoGame"
+        app:layout_constraintTop_toBottomOf="@+id/joKenPoGame"
+        app:srcCompat="@drawable/diceseisone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
