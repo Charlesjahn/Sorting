@@ -11,6 +11,22 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class DicesSix extends AppCompatActivity {
+    private int[] dicesNum ={
+            R.drawable.diceum,
+            R.drawable.dicedois,
+            R.drawable.dicetres,
+            R.drawable.dicequatro,
+            R.drawable.dicecinco,
+            R.drawable.diceseis,
+    };
+    private int[] dicesNumQuant ={
+            R.id.dicesSix1,
+            R.id.dicesSix2,
+            R.id.dicesSix3,
+            R.id.dicesSix4,
+            R.id.dicesSix5,
+            R.id.dicesSix6,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,47 +40,27 @@ public class DicesSix extends AppCompatActivity {
     }
 
     public void throwDices(View view) {
-        mainCallDSix();
-    }
+        TextView quantityDices = findViewById(R.id.quantityDices);
+        int quantityDicesValue = Integer.valueOf(String.valueOf(quantityDices.getText()));
+        int total = 0;
 
-    private void mainCallDSix() {
-        int num = randomNumber();
-        setFinalDiceSide(num);
-
-        TextView totalTV = findViewById(R.id.totalValueDice);
-        totalTV.setText(String.valueOf(num+1));
-    }
-
-    private int randomNumber() {
-        int num = new Random().nextInt(6);
-        return num;
-    }
-
-    private void setFinalDiceSide(int num) {
-        ImageView ImVi = findViewById(R.id.dicesSix);
-        switch (num + 1) {
-            case 1:
-                ImVi.setImageResource(R.drawable.diceum);
-                break;
-            case 2:
-                ImVi.setImageResource(R.drawable.dicedois);
-                break;
-            case 3:
-                ImVi.setImageResource(R.drawable.dicetres);
-                break;
-            case 4:
-                ImVi.setImageResource(R.drawable.dicequatro);
-                break;
-            case 5:
-                ImVi.setImageResource(R.drawable.dicecinco);
-                break;
-            case 6:
-                ImVi.setImageResource(R.drawable.diceseis);
-                break;
+        for(int i=0; i<quantityDicesValue; i++){
+            int num = new Random().nextInt(this.dicesNum.length);
+            setFinalDiceSide(num,this.dicesNumQuant[i]);
+            total += num+1;
         }
+        TextView totalTV = findViewById(R.id.totalValueDice);
+        totalTV.setText(String.valueOf(total));
+    }
+
+    private void setFinalDiceSide(int num, int id) {
+        ImageView ImVi = findViewById(id);
+        ImVi.setImageResource(dicesNum[num]);
     }
 
     private void addTotal(int x) {
         int total = 0;
     }
+
+
 }
