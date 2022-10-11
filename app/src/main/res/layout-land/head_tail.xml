@@ -20,12 +20,25 @@
         android:id="@+id/resultCircleCoin"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/tailPick"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/headPick"
-        app:layout_constraintTop_toBottomOf="@+id/resultHT"
+        app:layout_constraintBottom_toBottomOf="@+id/tailPick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tailPick"
+        app:layout_constraintTop_toTopOf="@+id/tailPick"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
+
+    <ImageView
+        android:id="@+id/tailPick"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:onClick="playerTail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resultCircleCoin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/headPick"
+        app:layout_constraintTop_toBottomOf="@+id/titleGameHT"
+        app:srcCompat="@drawable/tail" />
 
     <ImageView
         android:id="@+id/headPick"
@@ -38,18 +51,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tailPick"
         app:srcCompat="@drawable/head" />
-
-    <ImageView
-        android:id="@+id/tailPick"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginBottom="40dp"
-        android:onClick="playerTail"
-        app:layout_constraintBottom_toTopOf="@+id/resultHT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/headPick"
-        app:srcCompat="@drawable/tail" />
 
     <TextView
         android:id="@+id/titleGameHT"
@@ -71,20 +72,20 @@
         android:text="Result"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tailPick"
-        app:layout_constraintStart_toStartOf="@+id/headPick"
-        app:layout_constraintTop_toBottomOf="@+id/titleGameHT" />
+        app:layout_constraintBottom_toBottomOf="@+id/playerChoice"
+        app:layout_constraintEnd_toEndOf="@+id/resultCircleCoin"
+        app:layout_constraintStart_toStartOf="@+id/resultCircleCoin"
+        app:layout_constraintTop_toTopOf="@+id/playerChoice" />
 
     <TextView
         android:id="@+id/playerChoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:text="PICK A SIDE!!!"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tailPick"
+        app:layout_constraintBottom_toTopOf="@+id/headPick"
         app:layout_constraintEnd_toEndOf="@+id/tailPick"
         app:layout_constraintStart_toStartOf="@+id/headPick" />
 </androidx.constraintlayout.widget.ConstraintLayout>
