@@ -20,43 +20,44 @@
         android:id="@+id/circle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/resultJKP"
-        app:layout_constraintEnd_toEndOf="@+id/circle3"
-        app:layout_constraintStart_toStartOf="@+id/circle3"
+        android:layout_marginStart="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle3"
+        app:layout_constraintEnd_toStartOf="@+id/resultJKP"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circle3"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/circle" />
 
     <ImageView
         android:id="@+id/circle2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="@+id/circle3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/circle3"
-        app:layout_constraintTop_toTopOf="@+id/circle3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/circle3"
+        app:layout_constraintStart_toStartOf="@+id/circle3"
+        app:layout_constraintTop_toBottomOf="@+id/circle3"
         app:srcCompat="@drawable/circle" />
 
     <ImageView
         android:id="@+id/circle3"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/resultJKP"
+        app:layout_constraintBottom_toTopOf="@+id/circle2"
+        app:layout_constraintEnd_toStartOf="@+id/playerPick"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/resultJKP"
-        app:layout_constraintTop_toBottomOf="@+id/resultJKP"
+        app:layout_constraintStart_toEndOf="@+id/resultJKP"
+        app:layout_constraintTop_toBottomOf="@+id/circle4"
         app:srcCompat="@drawable/circle" />
 
     <ImageView
         android:id="@+id/circle4"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="@+id/circle3"
-        app:layout_constraintEnd_toStartOf="@+id/circle3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/circle3"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintEnd_toEndOf="@+id/circle3"
+        app:layout_constraintStart_toStartOf="@+id/circle3"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/circle" />
 
     <TextView
@@ -64,13 +65,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Result"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/circle3"
+        app:layout_constraintEnd_toStartOf="@+id/circle3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circle"
+        app:layout_constraintTop_toTopOf="@+id/circle3"
+        app:layout_constraintVertical_bias="0.494" />
 
     <ImageView
         android:id="@+id/rock"
@@ -103,18 +106,19 @@
         app:layout_constraintEnd_toEndOf="@+id/circle2"
         app:layout_constraintStart_toStartOf="@+id/circle2"
         app:layout_constraintTop_toTopOf="@+id/circle2"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/scissor" />
 
     <TextView
         android:id="@+id/titleGameJKP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
         android:text="JO KEN PO"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,13 +139,15 @@
         android:id="@+id/playerPick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:text="Choice one !!!"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/circle3"
-        app:layout_constraintStart_toStartOf="@+id/circle3"
-        app:layout_constraintTop_toBottomOf="@+id/circle3" />
+        app:layout_constraintBottom_toBottomOf="@+id/circle3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circle3"
+        app:layout_constraintTop_toTopOf="@+id/circle3"
+        app:layout_constraintVertical_bias="0.52" />
 
     <ImageView
         android:id="@+id/aiImagepick"
