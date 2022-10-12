@@ -42,4 +42,43 @@
         app:layout_constraintStart_toStartOf="@+id/joKenPoGame"
         app:layout_constraintTop_toBottomOf="@+id/joKenPoGame"
         app:srcCompat="@drawable/diceseisone" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Dices"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/dicesSixGame"
+        app:layout_constraintEnd_toEndOf="@+id/dicesSixGame"
+        app:layout_constraintStart_toStartOf="@+id/dicesSixGame" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Jo Ken Po"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/joKenPoGame"
+        app:layout_constraintEnd_toEndOf="@+id/joKenPoGame"
+        app:layout_constraintStart_toStartOf="@+id/joKenPoGame" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Head and Tail"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/hardTailGame"
+        app:layout_constraintEnd_toEndOf="@+id/hardTailGame"
+        app:layout_constraintStart_toStartOf="@+id/hardTailGame" />
 </androidx.constraintlayout.widget.ConstraintLayout>
